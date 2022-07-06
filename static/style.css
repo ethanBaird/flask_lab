@@ -1,0 +1,44 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+header {
+    background-color: hotpink;
+    color: white;
+    padding: 1rem;
+
+}
+
+main {
+    background-color: brown;
+}
+
+ul {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    list-style: none;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    background-color: hotpink;
+    border-style: solid;
+    border-color: black;
+    padding: 1rem;
+}
+
+a{
+    display: flex;
+    justify-content: center;
+    color: white;
+}

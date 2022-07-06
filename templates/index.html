@@ -5,16 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orders</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Our Orders Page!</h1>
-    {% for order in orders %}
+    <header>
+        <h1>Our Orders Page!</h1>
+    </header>
+    <main>
+        {% for order in orders %}
         <ul>
             <li><p><b>Customer:</b> {{ order.customer_name }}</p></li>
             <li><p><b>Date:</b> {{ order.order_date }}</p></li> 
             <li><p><b>Quantity: </b>{{ order.quantity }}</p></li> 
         </ul> 
-        <a href="/orders/{{loop.index0}}">View Details</a>
+        <div class="button">
+            <button><a href="/orders/{{loop.index0}}">View Details</a></button>
+        </div>
+        
     {% endfor %}
+    </main>
+   
 </body>
 </html>
