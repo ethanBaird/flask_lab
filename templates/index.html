@@ -9,9 +9,12 @@
 <body>
     <h1>Our Orders Page!</h1>
     {% for order in orders %}
-        <p><b>Customer:</b> {{ order.customer_name }}</p>
-        <p><b>Date:</b> {{ order.order_date }}</p>
-        <p><b>Quantity: </b>{{ order.quantity }}</p>
+        <ul>
+            <li><p><b>Customer:</b> {{ order.customer_name }}</p></li>
+            <li><p><b>Date:</b> {{ order.order_date }}</p></li> 
+            <li><p><b>Quantity: </b>{{ order.quantity }}</p></li> 
+        </ul> 
+        <a href="/orders/{{loop.index0}}">View Details</a>
     {% endfor %}
 </body>
 </html>
