@@ -15,18 +15,12 @@
         <h1>Our Orders Page!</h1>
     </header>
     <main>
+        <h2>Orders by Customer</h2>
         {% for order in orders %}
-        <ul>
-            <li><p><b>Customer:</b> {{ order.customer_name }}</p></li>
-            <li><p><b>Date:</b> {{ order.order_date }}</p></li> 
-            <li><p><b>Quantity: </b>{{ order.quantity }}</p></li> 
-        </ul> 
         <div class="button">
-            <button><a href="/orders/{{loop.index0}}">View Details</a></button>
+            <button><a href="/orders/{{loop.index0}}">{{ order.customer_name }}</a></button>
         </div>
-        
-    {% endfor %}
+        {% endfor %}
     </main>
-   
 </body>
 </html>
